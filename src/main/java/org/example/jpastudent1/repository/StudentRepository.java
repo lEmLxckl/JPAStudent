@@ -8,5 +8,5 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 
 public interface StudentRepository extends JpaRepository<Student, Integer> {
-    List<Student> findallbyName(String name);
+    List<Student> findAllByName(String name);
 }

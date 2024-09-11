@@ -31,7 +31,7 @@ public class StudentRestController {
 
     @GetMapping
     public List<Student> getallstudentsbyname(@PathVariable String name){
-        return studentRepository.findallbyName(name);
+        return studentRepository.findAllByName(name);
     }
 
 }
