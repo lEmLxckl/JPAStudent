@@ -16,6 +16,11 @@ public class StudentRestController {
     @Autowired
     StudentRepository studentRepository;
 
+    @GetMapping("/")
+    public String detteErRoden(){
+        return "Du er i roden af JPAStudent22";
+    }
+
     @GetMapping("/students")
     public List<Student> students(){
         var obj = studentRepository.findAll();
@@ -33,5 +38,6 @@ public class StudentRestController {
     public List<Student> getallstudentsbyname(@PathVariable String name){
         return studentRepository.findAllByName(name);
     }
+
 
 }
